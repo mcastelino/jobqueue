@@ -1,0 +1,9 @@
+apiVersion: batchjobs.example.com/v1alpha1
+kind: JobQueue
+metadata:
+  name: jobqueue-sample
+spec:
+  # Add fields here
+  work: "TestJobQueue"
+  size: 9
+  worksize: 300

@@ -1,0 +1,24 @@
+# permissions for end users to edit jobqueues.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: jobqueue-editor-role
+rules:
+- apiGroups:
+  - batchjobs.example.com
+  resources:
+  - jobqueues
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batchjobs.example.com
+  resources:
+  - jobqueues/status
+  verbs:
+  - get
